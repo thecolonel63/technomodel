@@ -7,7 +7,11 @@
   "authors": [
     "thecolonel63"
   ],
-  "contact": {},
+  "contact": {
+	  "sources": "https://github.com/thecolonel63/technomodel",
+	  "issues": "https://github.com/thecolonel63/technomodel/issues"
+  },
+  "icon": "assets/technomodel/icon.png",
   "license": "MIT",
   "environment": "client",
   "entrypoints": {
