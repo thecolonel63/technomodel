@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "technomodel",
+  "version": "${version}",
+  "name": "technomodel",
+  "description": "Adds Technoblade's crown to the pigs in Minecraft if they're named \"Technoblade\"",
+  "authors": [
+    "thecolonel63"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+  },
+  "mixins": [
+    "technomodel.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.19"
+  }
+}
