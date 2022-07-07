@@ -4,6 +4,7 @@
   "package": "com.thecolonel63.technomodel.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AnimalEntityMixin"
   ],
   "client": [
     "PigEntityRendererMixin"
