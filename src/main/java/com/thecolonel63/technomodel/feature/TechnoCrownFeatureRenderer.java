@@ -2,7 +2,7 @@ package com.thecolonel63.technomodel.feature;
 
 import com.thecolonel63.technomodel.duck.RenderCrownDuck;
 import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
@@ -29,7 +29,7 @@ public class TechnoCrownFeatureRenderer<S extends LivingEntityRenderState, RM ex
         if (((RenderCrownDuck) state).technomodel$shouldRenderCrown()) {
             EM model = state.baby ? this.babyModel : this.adultModel;
             model.setAngles(state);
-            queue.submitModel(model, state, matrices, RenderLayer.getEntityCutoutNoCull(this.TEXTURE), light, OverlayTexture.DEFAULT_UV, state.outlineColor, null);
+            queue.submitModel(model, state, matrices, RenderLayers.entityCutoutNoCull(this.TEXTURE), light, OverlayTexture.DEFAULT_UV, state.outlineColor, null);
         }
     }
 }
