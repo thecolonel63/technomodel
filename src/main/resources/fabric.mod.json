@@ -20,7 +20,7 @@
     "technomodel.mixins.json"
   ],
   "depends": {
-    "minecraft": ">=1.21.9",
+    "minecraft": ">=26.1",
     "fabric-resource-loader-v0": "*"
   }
 }

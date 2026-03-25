@@ -5,8 +5,8 @@
   "mixins": [
   ],
   "client": [
-    "PigEntityRendererMixin",
-    "PigEntityRenderStateMixin"
+    "PigRendererMixin",
+    "PigRenderStateMixin"
   ],
   "injectors": {
     "defaultRequire": 1
