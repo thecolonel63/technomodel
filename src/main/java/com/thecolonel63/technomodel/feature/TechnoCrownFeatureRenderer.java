@@ -27,7 +27,7 @@ public class TechnoCrownFeatureRenderer<S extends LivingEntityRenderState, RM ex
     }
 
     @Override
-    public void submit(@NonNull PoseStack stack, @NonNull SubmitNodeCollector collector, int light, S state, float limbAngle, float limbDistance) {
+    public void submit(@NonNull PoseStack stack, @NonNull SubmitNodeCollector collector, int light, @NonNull S state, float limbAngle, float limbDistance) {
         if (((RenderCrownDuck) state).technomodel$shouldRenderCrown()) {
             EM model = state.isBaby ? this.babyModel : this.adultModel;
             model.setupAnim(state);
@@ -37,9 +37,9 @@ public class TechnoCrownFeatureRenderer<S extends LivingEntityRenderState, RM ex
                 stack.translate(0.0, -0.0625, 0.0);
                 stack.scale(1.125f, 1.125f, 1.125f);
                 stack.translate(0.0, -1.0625, 0.25);
-                collector.submitModel(model, state, stack, RenderTypes.entityCutout(this.TEXTURE_BABY), light, OverlayTexture.NO_OVERLAY, state.outlineColor, null);
+                collector.submitModel(model, state, stack, RenderTypes.entityCutout(this.TEXTURE_BABY), light, OverlayTexture.NO_OVERLAY, state.outlineColor);
             } else {
-                collector.submitModel(model, state, stack, RenderTypes.entityCutout(this.TEXTURE_ADULT), light, OverlayTexture.NO_OVERLAY, state.outlineColor, null);
+                collector.submitModel(model, state, stack, RenderTypes.entityCutout(this.TEXTURE_ADULT), light, OverlayTexture.NO_OVERLAY, state.outlineColor);
             }
         }
     }

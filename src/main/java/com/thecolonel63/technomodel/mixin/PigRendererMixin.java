@@ -29,7 +29,7 @@ public abstract class PigRendererMixin extends LivingEntityRenderer {
     }
 
     @Inject(method = "extractRenderState(Lnet/minecraft/world/entity/animal/pig/Pig;Lnet/minecraft/client/renderer/entity/state/PigRenderState;F)V", at = @At("TAIL"))
-    private void onUpdateRenderState(Pig pigEntity, PigRenderState pigEntityRenderState, float f, CallbackInfo ci) {
-        ((RenderCrownDuck) pigEntityRenderState).technomodel$setRenderCrown(pigEntity.getName().getString().equals("Technoblade"));
+    private void onUpdateRenderState(Pig entity, PigRenderState state, float partialTicks, CallbackInfo ci) {
+        ((RenderCrownDuck) state).technomodel$setRenderCrown(entity.getName().getString().equals("Technoblade"));
     }
 }
